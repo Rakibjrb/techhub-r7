@@ -11,7 +11,7 @@ const Banner = () => {
       <div className="mt-1 md:flex gap-1">
         <div className="carousel w-full">
           <div id="slide1" className="carousel-item relative w-full">
-            <img src={image2} className="w-full h-[496px]" />
+            <img src={image2} className="w-full h-[510px]" />
             <div className="absolute w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.35)] to-[rgba(0,0,0,0.27)]">
               <div>
                 <h2 className="text-blue-600 text-4xl text-center mb-7 font-font-kanit">
@@ -47,7 +47,7 @@ const Banner = () => {
             </div>
           </div>
           <div id="slide2" className="carousel-item relative w-full">
-            <img src={image1} className="w-full h-[496px]" />
+            <img src={image1} className="w-full h-[510px]" />
             <div className="absolute w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.36)] to-[rgba(0,0,0,0.32)]">
               <div>
                 <h2 className="text-blue-600 text-4xl text-center mb-7 font-font-kanit">
@@ -83,7 +83,7 @@ const Banner = () => {
             </div>
           </div>
           <div id="slide3" className="carousel-item relative w-full">
-            <img src={image3} className="w-full h-[496px]" />
+            <img src={image3} className="w-full h-[510px]" />
             <div className="absolute w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.37)] to-[rgba(0,0,0,0.32)]">
               <div>
                 <h2 className="text-blue-600 text-4xl text-center mb-7 font-font-kanit">
@@ -119,7 +119,7 @@ const Banner = () => {
             </div>
           </div>
         </div>
-        <div className="relative mx-2 md:mx-0">
+        <div className="hidden lg:block relative mx-2 md:mx-0">
           <img src={image4} className="w-full h-full" alt="iphone" />
           <div className="absolute w-full h-full top-0 left-0 flex justify-center items-center bg-gradient-to-b from-[rgba(0,0,0,0.54)] to-[rgba(5,5,5,0.42)] p-10 font-font-lato">
             <div className="w-full space-y-5 text-center">
