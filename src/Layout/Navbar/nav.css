@@ -1,0 +1,5 @@
+.navstyle .active {
+  border-bottom: 1px solid blue;
+  color: blue;
+  padding-bottom: 8px;
+}
