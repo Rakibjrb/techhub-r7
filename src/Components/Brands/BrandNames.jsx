@@ -1,16 +1,7 @@
-import { useState } from "react";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const BrandNames = () => {
-  const [brands, setBrands] = useState([]);
-  console.log(brands);
-  useEffect(() => {
-    fetch(`https://brand-shop-server-side.vercel.app/api/brands`)
-      .then((res) => res.json())
-      .then((data) => setBrands(data.data));
-  }, []);
-
+const BrandNames = ({ data }) => {
   return (
     <div className="max-w-screen-xl mx-auto px-3 xl:px-0 my-16">
       <div className="text-center">
@@ -22,11 +13,11 @@ const BrandNames = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-3 mt-10">
-        {brands.map((brand) => {
+        {data.map((brand) => {
           return (
             <Link
               key={brand._id}
-              to={`/${brand.brand_name.toLowerCase()}/products`}
+              to={`/products/${brand.brand_name.toLowerCase()}`}
             >
               <div className="card bg-base-100 shadow-md image-full h-[300px]">
                 <figure>
@@ -51,3 +42,6 @@ const BrandNames = () => {
 };
 
 export default BrandNames;
+BrandNames.propTypes = {
+  data: PropTypes.array,
+};
