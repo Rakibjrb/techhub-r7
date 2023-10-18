@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
 import "./nav.css";
 
 const Nav = () => {
@@ -15,6 +16,8 @@ const Nav = () => {
       </li>
     </>
   );
+
+  const user = true;
 
   return (
     <div className="bg-gray-200">
@@ -54,29 +57,38 @@ const Nav = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-8 md:w-10 rounded-full">
-                <img src="https://i.ibb.co/5x441PC/user.png" />
+          <div className="flex items-center gap-2">
+            <Link to="/user/mycart" className="p-3 bg-slate-300 rounded-full">
+              <FaShoppingCart className="text-xl" />
+            </Link>
+            {user ? (
+              <div className="dropdown dropdown-end">
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                  <div className="w-8 md:w-10 rounded-full">
+                    <img src="https://i.ibb.co/5x441PC/user.png" />
+                  </div>
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                >
+                  <li>
+                    <a className="justify-between">
+                      Profile
+                      <span className="badge">New</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>Settings</a>
+                  </li>
+                  <li>
+                    <a>Logout</a>
+                  </li>
+                </ul>
               </div>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                <a>Settings</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
-            </ul>
+            ) : (
+              <button className="btn btn-primary">Login</button>
+            )}
           </div>
         </div>
       </div>

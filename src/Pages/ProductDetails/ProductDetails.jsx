@@ -44,11 +44,15 @@ const ProductDetails = () => {
     <div className="max-w-screen-md mx-auto px-3 md:px-0 py-10">
       <div className="card card-compact bg-base-100 shadow-xl">
         <figure>
-          <img src={product_image} alt={product_name} />
+          <img
+            className="w-full  md:h-[432px]"
+            src={product_image}
+            alt={product_name}
+          />
         </figure>
         <div className="card-body">
           <h2 className="card-title font-bold text-2xl">{product_name}</h2>
-          <p>{short_description}</p>
+          <p className="text-justify md:text-left">{short_description}</p>
           <h4 className="text-xl font-semibold">Brand Name : {brand_name}</h4>
           <h4 className="text-xl font-semibold">Product Type : {type}</h4>
           <h4 className="text-xl font-semibold">Price : {price}$</h4>
