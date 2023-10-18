@@ -5,6 +5,7 @@ import ErrorPage from "../Layout/ErrorPage";
 import Products from "../Pages/Products/Products";
 import AddProduct from "../Pages/AddProduct/AddProduct";
 import UpdateProduct from "../Pages/AddProduct/UpdateProduct/UpdateProduct";
+import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 
 const routes = createBrowserRouter([
   {
@@ -30,6 +31,14 @@ const routes = createBrowserRouter([
       {
         path: "/api/update/product/:_id",
         element: <UpdateProduct />,
+      },
+      {
+        path: "/api/product/details/:_id",
+        element: <ProductDetails />,
+        loader: ({ params }) =>
+          fetch(
+            `https://brand-shop-server-side.vercel.app/api/products/${params._id}`
+          ),
       },
     ],
     errorElement: <ErrorPage />,

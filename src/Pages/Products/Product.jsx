@@ -17,11 +17,16 @@ const Product = ({ product }) => {
           <p>Product Type : {type}</p>
         </div>
         <div className="flex justify-between">
-          <p>Price : {price}</p>
+          <p>Price : {price}$</p>
           <p>Ratings : {ratings}</p>
         </div>
         <div className="flex gap-3 mt-4">
-          <button className="btn btn-primary flex-1">Details</button>
+          <Link
+            to={`/api/product/details/${_id}`}
+            className="btn btn-primary flex-1"
+          >
+            Details
+          </Link>
           <Link
             to={`/api/update/product/${_id}`}
             className="btn btn-primary flex-1"
