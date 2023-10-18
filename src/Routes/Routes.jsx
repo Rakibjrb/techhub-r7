@@ -31,6 +31,10 @@ const routes = createBrowserRouter([
       {
         path: "/api/update/product/:_id",
         element: <UpdateProduct />,
+        loader: ({ params }) =>
+          fetch(
+            `https://brand-shop-server-side.vercel.app/api/products/${params._id}`
+          ),
       },
       {
         path: "/api/product/details/:_id",

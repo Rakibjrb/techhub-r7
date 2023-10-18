@@ -3,14 +3,29 @@ import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import swal from "sweetalert";
 
-const Form = ({ location }) => {
+const Form = ({ location, data }) => {
   const [formUpdate, setFormUpdate] = useState({
     formText: "Add A New Product",
     btnText: "Add Product",
   });
 
   const updateProduct = (productData) => {
-    console.log(productData);
+    fetch(
+      `https://brand-shop-server-side.vercel.app/api/products/${data._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(productData),
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => swal(data.message))
+      .catch((err) => {
+        toast.error("something went wrong !!!");
+        console.log(err);
+      });
   };
 
   const addProduct = (productData) => {
@@ -91,6 +106,7 @@ const Form = ({ location }) => {
                       placeholder="product image url"
                       className="input input-bordered"
                       name="product_image"
+                      defaultValue={data?.product_image || ""}
                       required
                     />
                   </div>
@@ -103,6 +119,7 @@ const Form = ({ location }) => {
                       placeholder="Product Name"
                       className="input input-bordered"
                       name="product_name"
+                      defaultValue={data?.product_name || ""}
                       required
                     />
                   </div>
@@ -115,6 +132,7 @@ const Form = ({ location }) => {
                       placeholder="Brand Name"
                       className="input input-bordered"
                       name="brand_name"
+                      defaultValue={data?.brand_name || ""}
                       required
                     />
                   </div>
@@ -127,6 +145,7 @@ const Form = ({ location }) => {
                       placeholder="Product Type"
                       className="input input-bordered"
                       name="type"
+                      defaultValue={data?.type || ""}
                       required
                     />
                   </div>
@@ -139,6 +158,7 @@ const Form = ({ location }) => {
                       placeholder="Brand Name"
                       className="input input-bordered"
                       name="price"
+                      defaultValue={data?.price || ""}
                       required
                     />
                   </div>
@@ -151,6 +171,7 @@ const Form = ({ location }) => {
                       placeholder="product ratings"
                       className="input input-bordered"
                       name="ratings"
+                      defaultValue={data?.ratings || ""}
                       required
                     />
                   </div>
@@ -163,6 +184,7 @@ const Form = ({ location }) => {
                       placeholder="write description here ..."
                       className="input input-bordered py-3 h-[150px]"
                       name="description"
+                      defaultValue={data?.short_description || ""}
                       required
                     ></textarea>
                   </div>
@@ -184,4 +206,5 @@ const Form = ({ location }) => {
 export default Form;
 Form.propTypes = {
   location: PropTypes.string,
+  data: PropTypes.object,
 };
