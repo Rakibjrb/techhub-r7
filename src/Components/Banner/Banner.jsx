@@ -7,12 +7,12 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className="max-w-screen-xl mx-auto">
-      <div className="md:mt-1 md:flex gap-1">
+    <div className="max-w-screen-2xl mx-auto">
+      <div className="mt-1 md:flex gap-1">
         <div className="carousel w-full">
           <div id="slide1" className="carousel-item relative w-full">
             <img src={image2} className="w-full h-[496px]" />
-            <div className="absolute w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.6)] to-[rgba(0,0,0,0.27)]">
+            <div className="absolute w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.35)] to-[rgba(0,0,0,0.27)]">
               <div>
                 <h2 className="text-blue-600 text-4xl text-center mb-7 font-font-kanit">
                   Apple iMac
@@ -32,26 +32,32 @@ const Banner = () => {
               </div>
             </div>
             <div className="hidden absolute md:flex justify-between transform -translate-y-1/2 left-1 right-1 lg:left-5 lg:right-5 top-1/2">
-              <a href="#slide3" className="btn btn-circle bg-slate-300">
+              <a
+                href="#slide3"
+                className="btn btn-circle bg-transparent text-white hover:text-black"
+              >
                 ❮
               </a>
-              <a href="#slide2" className="btn btn-circle bg-slate-300">
+              <a
+                href="#slide2"
+                className="btn btn-circle bg-transparent text-white hover:text-black"
+              >
                 ❯
               </a>
             </div>
           </div>
           <div id="slide2" className="carousel-item relative w-full">
             <img src={image1} className="w-full h-[496px]" />
-            <div className="absolute w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.71)] to-[rgba(0,0,0,0.32)]">
+            <div className="absolute w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.36)] to-[rgba(0,0,0,0.32)]">
               <div>
                 <h2 className="text-blue-600 text-4xl text-center mb-7 font-font-kanit">
-                  Apple iMac
+                  Apple iMac Pro Max
                 </h2>
                 <p className="text-white font-font-lato font-bold text-center text-xl ">
-                  iMac M1 and Powerful processors go hand in hand. Up to a{" "}
-                  <br /> 6-core Intel Core i7 Processor gives the 21.5 inch iMac
-                  all the power you need for <br /> creating in Photoshop,
-                  Editing videos, or making music.
+                  iMac Pro Price in Bangladesh starts at 2,69,000 BDT with its
+                  based model of 27-inch variant <br /> 5K display variant. The
+                  pro – iMac price in BD sometimes goes up to <br /> 3,00,000
+                  BDT for different variants.
                 </p>
                 <div className="flex justify-center mt-5">
                   <Link className="btn btn-primary font-font-kanit">
@@ -62,10 +68,16 @@ const Banner = () => {
               </div>
             </div>
             <div className="hidden absolute md:flex justify-between transform -translate-y-1/2 left-1 right-1 lg:left-5 lg:right-5 top-1/2">
-              <a href="#slide1" className="btn btn-circle bg-slate-300">
+              <a
+                href="#slide1"
+                className="btn btn-circle bg-transparent text-white hover:text-black"
+              >
                 ❮
               </a>
-              <a href="#slide3" className="btn btn-circle bg-slate-300">
+              <a
+                href="#slide3"
+                className="btn btn-circle bg-transparent text-white hover:text-black"
+              >
                 ❯
               </a>
             </div>
@@ -75,13 +87,13 @@ const Banner = () => {
             <div className="absolute w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.37)] to-[rgba(0,0,0,0.32)]">
               <div>
                 <h2 className="text-blue-600 text-4xl text-center mb-7 font-font-kanit">
-                  Apple iMac
+                  Apple Macbook Air
                 </h2>
                 <p className="text-white font-font-lato font-bold text-center text-xl ">
-                  iMac M1 and Powerful processors go hand in hand. Up to a{" "}
-                  <br /> 6-core Intel Core i7 Processor gives the 21.5 inch iMac
-                  all the power you need for <br /> creating in Photoshop,
-                  Editing videos, or making music.
+                  Apples thinnest, lightest notebook, completely transformed by
+                  the Apple M1 chip. <br /> CPU speeds up to 3.5x faster. GPU
+                  speeds up to 5x faster. Our most advanced <br /> Neural Engine
+                  for up to 9x faster machine learning.
                 </p>
                 <div className="flex justify-center mt-5">
                   <Link className="btn btn-primary font-font-kanit">
@@ -92,10 +104,16 @@ const Banner = () => {
               </div>
             </div>
             <div className="hidden absolute md:flex justify-between transform -translate-y-1/2 left-1 right-1 lg:left-5 lg:right-5 top-1/2">
-              <a href="#slide2" className="btn btn-circle bg-slate-300">
+              <a
+                href="#slide2"
+                className="btn btn-circle bg-transparent text-white hover:text-black"
+              >
                 ❮
               </a>
-              <a href="#slide1" className="btn btn-circle bg-slate-300">
+              <a
+                href="#slide1"
+                className="btn btn-circle bg-transparent text-white hover:text-black"
+              >
                 ❯
               </a>
             </div>
