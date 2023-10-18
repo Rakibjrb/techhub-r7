@@ -12,7 +12,7 @@ const Banner = () => {
         <div className="carousel w-full">
           <div id="slide1" className="carousel-item relative w-full">
             <img src={image2} className="w-full h-[510px]" />
-            <div className="absolute w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.35)] to-[rgba(0,0,0,0.27)]">
+            <div className="absolute px-5 lg:px-0 w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.35)] to-[rgba(0,0,0,0.27)]">
               <div>
                 <h2 className="text-blue-600 text-4xl text-center mb-7 font-font-kanit">
                   Apple iMac
@@ -48,7 +48,7 @@ const Banner = () => {
           </div>
           <div id="slide2" className="carousel-item relative w-full">
             <img src={image1} className="w-full h-[510px]" />
-            <div className="absolute w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.36)] to-[rgba(0,0,0,0.32)]">
+            <div className="absolute px-5 lg:px-0 w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.36)] to-[rgba(0,0,0,0.32)]">
               <div>
                 <h2 className="text-blue-600 text-4xl text-center mb-7 font-font-kanit">
                   Apple iMac Pro Max
@@ -61,8 +61,7 @@ const Banner = () => {
                 </p>
                 <div className="flex justify-center mt-5">
                   <Link className="btn btn-primary font-font-kanit">
-                    Learn More{" "}
-                    <AiOutlineArrowRight className="text-white text-[16px]" />
+                    Learn More <AiOutlineArrowRight className="text-white" />
                   </Link>
                 </div>
               </div>
@@ -84,7 +83,7 @@ const Banner = () => {
           </div>
           <div id="slide3" className="carousel-item relative w-full">
             <img src={image3} className="w-full h-[510px]" />
-            <div className="absolute w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.37)] to-[rgba(0,0,0,0.32)]">
+            <div className="absolute px-5 lg:px-0 w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.37)] to-[rgba(0,0,0,0.32)]">
               <div>
                 <h2 className="text-blue-600 text-4xl text-center mb-7 font-font-kanit">
                   Apple Macbook Air
