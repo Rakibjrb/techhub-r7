@@ -1,7 +1,124 @@
+import { AiOutlineArrowRight } from "react-icons/ai";
+import image1 from "../../assets/images/imac1.jpg";
+import image2 from "../../assets/images/imac2.jpg";
+import image3 from "../../assets/images/macbook pro.jpg";
+import image4 from "../../assets/images/iphone14.jpg";
+import { Link } from "react-router-dom";
+
 const Banner = () => {
   return (
-    <div className="max-w-screen-xl mx-auto px-4 xl:px-0">
-      <div>Banner </div>
+    <div className="max-w-screen-xl mx-auto">
+      <div className="md:mt-1 md:flex gap-1">
+        <div className="carousel w-full">
+          <div id="slide1" className="carousel-item relative w-full">
+            <img src={image2} className="w-full h-[496px]" />
+            <div className="absolute w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.6)] to-[rgba(0,0,0,0.27)]">
+              <div>
+                <h2 className="text-blue-600 text-4xl text-center mb-7 font-font-kanit">
+                  Apple iMac
+                </h2>
+                <p className="text-white font-font-lato font-bold text-center text-xl ">
+                  iMac M1 and Powerful processors go hand in hand. Up to a{" "}
+                  <br /> 6-core Intel Core i7 Processor gives the 21.5 inch iMac
+                  all the power you need for <br /> creating in Photoshop,
+                  Editing videos, or making music.
+                </p>
+                <div className="flex justify-center mt-5">
+                  <Link className="btn btn-primary font-font-kanit">
+                    Learn More{" "}
+                    <AiOutlineArrowRight className="text-white text-[16px]" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="hidden absolute md:flex justify-between transform -translate-y-1/2 left-1 right-1 lg:left-5 lg:right-5 top-1/2">
+              <a href="#slide3" className="btn btn-circle bg-slate-300">
+                ❮
+              </a>
+              <a href="#slide2" className="btn btn-circle bg-slate-300">
+                ❯
+              </a>
+            </div>
+          </div>
+          <div id="slide2" className="carousel-item relative w-full">
+            <img src={image1} className="w-full h-[496px]" />
+            <div className="absolute w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.71)] to-[rgba(0,0,0,0.32)]">
+              <div>
+                <h2 className="text-blue-600 text-4xl text-center mb-7 font-font-kanit">
+                  Apple iMac
+                </h2>
+                <p className="text-white font-font-lato font-bold text-center text-xl ">
+                  iMac M1 and Powerful processors go hand in hand. Up to a{" "}
+                  <br /> 6-core Intel Core i7 Processor gives the 21.5 inch iMac
+                  all the power you need for <br /> creating in Photoshop,
+                  Editing videos, or making music.
+                </p>
+                <div className="flex justify-center mt-5">
+                  <Link className="btn btn-primary font-font-kanit">
+                    Learn More{" "}
+                    <AiOutlineArrowRight className="text-white text-[16px]" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="hidden absolute md:flex justify-between transform -translate-y-1/2 left-1 right-1 lg:left-5 lg:right-5 top-1/2">
+              <a href="#slide1" className="btn btn-circle bg-slate-300">
+                ❮
+              </a>
+              <a href="#slide3" className="btn btn-circle bg-slate-300">
+                ❯
+              </a>
+            </div>
+          </div>
+          <div id="slide3" className="carousel-item relative w-full">
+            <img src={image3} className="w-full h-[496px]" />
+            <div className="absolute w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.37)] to-[rgba(0,0,0,0.32)]">
+              <div>
+                <h2 className="text-blue-600 text-4xl text-center mb-7 font-font-kanit">
+                  Apple iMac
+                </h2>
+                <p className="text-white font-font-lato font-bold text-center text-xl ">
+                  iMac M1 and Powerful processors go hand in hand. Up to a{" "}
+                  <br /> 6-core Intel Core i7 Processor gives the 21.5 inch iMac
+                  all the power you need for <br /> creating in Photoshop,
+                  Editing videos, or making music.
+                </p>
+                <div className="flex justify-center mt-5">
+                  <Link className="btn btn-primary font-font-kanit">
+                    Learn More{" "}
+                    <AiOutlineArrowRight className="text-white text-[16px]" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="hidden absolute md:flex justify-between transform -translate-y-1/2 left-1 right-1 lg:left-5 lg:right-5 top-1/2">
+              <a href="#slide2" className="btn btn-circle bg-slate-300">
+                ❮
+              </a>
+              <a href="#slide1" className="btn btn-circle bg-slate-300">
+                ❯
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="relative mx-2 md:mx-0">
+          <img src={image4} className="w-full h-full" alt="iphone" />
+          <div className="absolute w-full h-full top-0 left-0 flex justify-center items-center bg-gradient-to-b from-[rgba(0,0,0,0.54)] to-[rgba(5,5,5,0.42)] p-10 font-font-lato">
+            <div className="w-full space-y-5 text-center">
+              <h3 className="text-center font-font-kanit text-white text-3xl">
+                Iphone 14 pro max
+              </h3>
+              <p className="text-white">
+                The brand new qualitiful product from Apple
+              </p>
+              <p className="text-white">
+                The Apple iPhone 14 Pro Max is the most advanced smartphone in
+                the Pro Max series, offering an incredible user experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
