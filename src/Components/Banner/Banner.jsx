@@ -126,9 +126,7 @@ const Banner = () => {
               <h3 className="text-center font-font-kanit text-white text-3xl">
                 Iphone 14 pro max
               </h3>
-              <p className="text-white">
-                The brand new qualitiful product from Apple
-              </p>
+              <p className="text-white">The brand new product from Apple</p>
               <p className="text-white">
                 The Apple iPhone 14 Pro Max is the most advanced smartphone in
                 the Pro Max series, offering an incredible user experience.
