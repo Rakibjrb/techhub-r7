@@ -17,10 +17,10 @@ const Nav = () => {
     </>
   );
 
-  const user = true;
+  const user = false;
 
   return (
-    <div className="bg-gray-200">
+    <div className="bg-gray-300">
       <div className="navbar max-w-screen-xl mx-auto px-4 xl:px-0 font-font-lato">
         <div className="navbar-start">
           <div className="dropdown">
@@ -58,7 +58,7 @@ const Nav = () => {
         </div>
         <div className="navbar-end">
           <div className="flex items-center gap-2">
-            <Link to="/user/mycart" className="p-3 bg-slate-300 rounded-full">
+            <Link to="/user/mycart" className="p-3 bg-gray-200 rounded-full">
               <FaShoppingCart className="text-xl" />
             </Link>
             {user ? (
@@ -87,7 +87,9 @@ const Nav = () => {
                 </ul>
               </div>
             ) : (
-              <button className="btn btn-primary">Login</button>
+              <Link to="/user/account" className="btn btn-primary">
+                Login
+              </Link>
             )}
           </div>
         </div>

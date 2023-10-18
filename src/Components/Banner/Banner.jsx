@@ -8,11 +8,11 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <div className="max-w-screen-2xl mx-auto">
-      <div className="mt-1 md:flex gap-1">
+      <div className="mt-3 md:flex gap-3">
         <div className="carousel w-full">
           <div id="slide1" className="carousel-item relative w-full">
             <img src={image2} className="w-full h-[510px]" />
-            <div className="absolute px-5 lg:px-0 w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.35)] to-[rgba(0,0,0,0.27)]">
+            <div className="absolute px-5 lg:px-0 w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(32,32,32,0.44)] to-[rgba(40,40,40,0.43)]">
               <div>
                 <h2 className="text-blue-600 text-4xl text-center mb-7 font-font-kanit">
                   Apple iMac
@@ -48,7 +48,7 @@ const Banner = () => {
           </div>
           <div id="slide2" className="carousel-item relative w-full">
             <img src={image1} className="w-full h-[510px]" />
-            <div className="absolute px-5 lg:px-0 w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.36)] to-[rgba(0,0,0,0.32)]">
+            <div className="absolute px-5 lg:px-0 w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(32,32,32,0.44)] to-[rgba(40,40,40,0.43)]">
               <div>
                 <h2 className="text-blue-600 text-4xl text-center mb-7 font-font-kanit">
                   Apple iMac Pro Max
@@ -83,7 +83,7 @@ const Banner = () => {
           </div>
           <div id="slide3" className="carousel-item relative w-full">
             <img src={image3} className="w-full h-[510px]" />
-            <div className="absolute px-5 lg:px-0 w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(36,36,36,0.37)] to-[rgba(0,0,0,0.32)]">
+            <div className="absolute px-5 lg:px-0 w-full h-full flex justify-center items-center bg-gradient-to-b from-[rgba(32,32,32,0.44)] to-[rgba(40,40,40,0.43)]">
               <div>
                 <h2 className="text-blue-600 text-4xl text-center mb-7 font-font-kanit">
                   Apple Macbook Air

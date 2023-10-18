@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import "./brandnames.css";
 
 const BrandNames = ({ data }) => {
   return (
@@ -16,22 +17,20 @@ const BrandNames = ({ data }) => {
         {data.map((brand) => {
           return (
             <Link
+              className="overflow-hidden for-hover-style transition-all"
               key={brand._id}
               to={`/products/${brand.brand_name.toLowerCase()}`}
             >
-              <div className="card bg-base-100 shadow-md image-full h-[300px]">
-                <figure>
-                  <img
-                    src={brand.brand_img}
-                    className="w-full h-40"
-                    alt={brand.brand_name}
-                  />
-                </figure>
-                <div className="card-body relative">
-                  <h2 className="text-3xl font-font-kanit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    {brand.brand_name}
-                  </h2>
-                </div>
+              <div className="relative image-full h-[300px]">
+                <img
+                  src={brand.brand_img}
+                  className="w-full h-full absolute"
+                  alt={brand.brand_name}
+                />
+                <div className="absolute w-full h-full bg-gradient-to-t from-[rgba(32,32,32,0.44)] to-[rgba(40,40,40,0.43)]"></div>
+                <h2 className="brand-name text-3xl text-white font-font-kanit absolute -top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  {brand.brand_name}
+                </h2>
               </div>
             </Link>
           );

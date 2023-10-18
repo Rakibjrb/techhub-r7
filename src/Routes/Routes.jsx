@@ -7,6 +7,7 @@ import AddProduct from "../Pages/AddProduct/AddProduct";
 import UpdateProduct from "../Pages/AddProduct/UpdateProduct/UpdateProduct";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import MyCart from "../Pages/MyCart/MyCart";
+import Switcher from "../Pages/LoginAndSignUp/Switcher";
 
 const routes = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const routes = createBrowserRouter([
         element: <MyCart />,
         loader: () =>
           fetch("https://brand-shop-server-side.vercel.app/api/cartproducts"),
+      },
+      {
+        path: "/user/account",
+        element: <Switcher />,
       },
     ],
     errorElement: <ErrorPage />,

@@ -1,0 +1,4 @@
+.for-hover-style:hover .brand-name {
+  top: 50%;
+  transition: 0.4s;
+}
