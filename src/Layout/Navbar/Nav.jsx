@@ -1,5 +1,4 @@
 import { Link, NavLink } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa";
 import "./nav.css";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
@@ -13,6 +12,9 @@ const Nav = () => {
       </li>
       <li>
         <NavLink to="/api/add/product">Add Product</NavLink>
+      </li>
+      <li>
+        <NavLink to="/user/mycart">My Cart</NavLink>
       </li>
     </>
   );
@@ -63,10 +65,7 @@ const Nav = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <div className="flex items-center gap-2">
-            <Link to="/user/mycart" className="p-3 bg-gray-200 rounded-full">
-              <FaShoppingCart className="text-xl" />
-            </Link>
+          <div>
             {user ? (
               <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">

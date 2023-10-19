@@ -3,7 +3,6 @@ import image1 from "../../assets/images/imac1.jpg";
 import image2 from "../../assets/images/imac2.jpg";
 import image3 from "../../assets/images/macbook pro.jpg";
 import image4 from "../../assets/images/iphone14.jpg";
-import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -23,11 +22,10 @@ const Banner = () => {
                   all the power you need for <br /> creating in Photoshop,
                   Editing videos, or making music.
                 </p>
-                <div className="flex justify-center mt-5">
-                  <Link className="btn btn-primary font-font-kanit">
-                    Learn More{" "}
+                <div className="flex justify-center mt-5 md:hidden">
+                  <a href="#slide2" className="btn btn-primary font-font-kanit">
                     <AiOutlineArrowRight className="text-white text-[16px]" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -59,10 +57,10 @@ const Banner = () => {
                   pro – iMac price in BD sometimes goes up to <br /> 3,00,000
                   BDT for different variants.
                 </p>
-                <div className="flex justify-center mt-5">
-                  <Link className="btn btn-primary font-font-kanit">
-                    Learn More <AiOutlineArrowRight className="text-white" />
-                  </Link>
+                <div className="flex justify-center mt-5 md:hidden">
+                  <a href="#slide3" className="btn btn-primary font-font-kanit">
+                    <AiOutlineArrowRight className="text-white text-[16px]" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -94,11 +92,10 @@ const Banner = () => {
                   speeds up to 5x faster. Our most advanced <br /> Neural Engine
                   for up to 9x faster machine learning.
                 </p>
-                <div className="flex justify-center mt-5">
-                  <Link className="btn btn-primary font-font-kanit">
-                    Learn More{" "}
+                <div className="flex justify-center mt-5 md:hidden">
+                  <a href="#slide1" className="btn btn-primary font-font-kanit">
                     <AiOutlineArrowRight className="text-white text-[16px]" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
