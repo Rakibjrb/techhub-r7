@@ -1,12 +1,31 @@
 import PropTypes from "prop-types";
 import ExtraLogin from "./ExtraLogin";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { toast } from "react-hot-toast";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Login = ({ handleFormToggle }) => {
+  const { requestUserLogin } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
+    requestUserLogin(email, password)
+      .then(() => {
+        toast.success("User login success .....");
+        e.target.reset();
+        location.state ? navigate(location.pathname) : navigate("/");
+      })
+      .catch(() => {
+        toast.error("something went wrong !!!");
+        setTimeout(() => {
+          toast.success("Please try again .....");
+        }, 500);
+      });
   };
 
   return (

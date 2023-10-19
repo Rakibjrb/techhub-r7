@@ -1,8 +1,13 @@
 import PropTypes from "prop-types";
 import ExtraLogin from "./ExtraLogin";
 import toast from "react-hot-toast";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Signup = ({ handleFormToggle }) => {
+  const { userSignUpWithEmailAndPassword, updateNameAndPhoto } =
+    useContext(AuthContext);
+
   const handleSignUp = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -20,7 +25,16 @@ const Signup = ({ handleFormToggle }) => {
       return;
     }
 
-    console.log(name, email);
+    userSignUpWithEmailAndPassword(email, password)
+      .then(() => {
+        updateNameAndPhoto(name)
+          .then(() => {
+            toast.success("User account creation successfull ...");
+            e.target.reset();
+          })
+          .catch(() => toast.error("something went wrong !!!"));
+      })
+      .catch(() => toast.error("something went wrong !!!"));
   };
   return (
     <div className="px-5 sm:px-0 hero py-10 bg-[rgb(255,255,255)]">

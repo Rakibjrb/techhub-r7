@@ -1,6 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import "./nav.css";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { toast } from "react-hot-toast";
 
 const Nav = () => {
   const navlinks = (
@@ -17,7 +20,13 @@ const Nav = () => {
     </>
   );
 
-  const user = false;
+  const { user, requestUserLogOut } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    requestUserLogOut()
+      .then(() => toast.success("User logout successfull ....."))
+      .catch(() => toast.error("something went wrong !!!"));
+  };
 
   return (
     <div className="bg-gray-300">
@@ -65,7 +74,7 @@ const Nav = () => {
               <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-8 md:w-10 rounded-full">
-                    <img src="https://i.ibb.co/5x441PC/user.png" />
+                    <img src={user?.photoURL} />
                   </div>
                 </label>
                 <ul
@@ -74,15 +83,12 @@ const Nav = () => {
                 >
                   <li>
                     <a className="justify-between">
-                      Profile
+                      {user?.displayName}
                       <span className="badge">New</span>
                     </a>
                   </li>
                   <li>
-                    <a>Settings</a>
-                  </li>
-                  <li>
-                    <a>Logout</a>
+                    <button onClick={handleLogout}>Logout</button>
                   </li>
                 </ul>
               </div>
