@@ -10,7 +10,7 @@ const MostSoldProducts = () => {
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.data
-          .slice(3)
+          .slice(1, 8)
           .filter((product) => product.ratings === "4.9");
         setMostSoldProducts(filtered);
       });
@@ -26,27 +26,23 @@ const MostSoldProducts = () => {
           <div className="w-24 h-1 bg-blue-700 rounded-md"></div>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mt-10">
         {mostSoldProducts.map((product) => (
           <div key={product._id}>
             <div className="card card-compact bg-base-100 shadow-xl">
               <figure>
                 <img
-                  className="w-full h-[240px]"
+                  className="w-full h-[240px] xl:h-[190px]"
                   src={product.product_image}
                   alt={product.product_name}
                 />
               </figure>
               <div className="card-body">
                 <h2 className="card-title">{product.product_name}</h2>
-                <div className="flex justify-between">
-                  <p>Brand Name : {product.brand_name}</p>
-                  <p>Product Type : {product.type}</p>
-                </div>
-                <div className="flex justify-between">
-                  <p>Price : {product.price}$</p>
-                  <p>Ratings : {product.ratings}</p>
-                </div>
+                <p>Brand Name : {product.brand_name}</p>
+                <p>Product Type : {product.type}</p>
+                <p>Price : {product.price}$</p>
+                <p>Ratings : {product.ratings}</p>
                 <div className="flex gap-3 mt-4">
                   <Link
                     to={`/api/product/details/${product._id}`}
