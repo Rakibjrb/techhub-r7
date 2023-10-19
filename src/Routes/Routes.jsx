@@ -8,6 +8,7 @@ import UpdateProduct from "../Pages/AddProduct/UpdateProduct/UpdateProduct";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import MyCart from "../Pages/MyCart/MyCart";
 import Switcher from "../Pages/LoginAndSignUp/Switcher";
+import Protectection from "./Protectection";
 
 const routes = createBrowserRouter([
   {
@@ -28,11 +29,19 @@ const routes = createBrowserRouter([
       },
       {
         path: "/api/add/product",
-        element: <AddProduct />,
+        element: (
+          <Protectection>
+            <AddProduct />
+          </Protectection>
+        ),
       },
       {
         path: "/api/update/product/:_id",
-        element: <UpdateProduct />,
+        element: (
+          <Protectection>
+            <UpdateProduct />
+          </Protectection>
+        ),
         loader: ({ params }) =>
           fetch(
             `https://brand-shop-server-side.vercel.app/api/products/${params._id}`
@@ -40,7 +49,11 @@ const routes = createBrowserRouter([
       },
       {
         path: "/api/product/details/:_id",
-        element: <ProductDetails />,
+        element: (
+          <Protectection>
+            <ProductDetails />
+          </Protectection>
+        ),
         loader: ({ params }) =>
           fetch(
             `https://brand-shop-server-side.vercel.app/api/products/${params._id}`
@@ -48,7 +61,11 @@ const routes = createBrowserRouter([
       },
       {
         path: "/user/mycart",
-        element: <MyCart />,
+        element: (
+          <Protectection>
+            <MyCart />
+          </Protectection>
+        ),
         loader: () =>
           fetch("https://brand-shop-server-side.vercel.app/api/cartproducts"),
       },

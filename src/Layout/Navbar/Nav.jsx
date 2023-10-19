@@ -14,9 +14,6 @@ const Nav = () => {
       <li>
         <NavLink to="/api/add/product">Add Product</NavLink>
       </li>
-      <li>
-        <NavLink to="/api/added/product">Added Products</NavLink>
-      </li>
     </>
   );
 
