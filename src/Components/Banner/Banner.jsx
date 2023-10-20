@@ -6,8 +6,8 @@ import image4 from "../../assets/images/iphone14.jpg";
 
 const Banner = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto">
-      <div className="mt-3 md:flex gap-3">
+    <div className="max-w-screen-2xl mx-auto px-2">
+      <div className="mt-2 md:flex gap-2">
         <div className="carousel w-full">
           <div id="slide1" className="carousel-item relative w-full">
             <img src={image2} className="w-full h-[510px]" />
