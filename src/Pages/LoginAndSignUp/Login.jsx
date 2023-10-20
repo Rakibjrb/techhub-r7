@@ -20,8 +20,8 @@ const Login = ({ handleFormToggle }) => {
         e.target.reset();
         location.state ? navigate(location.pathname) : navigate("/");
       })
-      .catch(() => {
-        toast.error("something went wrong !!!");
+      .catch((err) => {
+        toast.error(err.message);
         setTimeout(() => {
           toast.success("Please try again .....");
         }, 500);

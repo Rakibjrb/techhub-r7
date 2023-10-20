@@ -23,7 +23,7 @@ const Products = () => {
       {products.length > 0 ? (
         <>
           <div className="mt-4 max-w-screen-lg mx-auto">
-            <div className="carousel h-[400px]">
+            <div className="carousel md:h-[400px]">
               <div id="item1" className="carousel-item w-full">
                 <img src={products[2]?.product_image} className="w-full" />
               </div>
