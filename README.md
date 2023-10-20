@@ -6,6 +6,7 @@
 
 ## Project Features
 
+1. Data theme toggle system between light and dark
 1. User authentication system
 1. Dynamic product advertisment slider on brand product page
 1. All data is dynamic loaded from database

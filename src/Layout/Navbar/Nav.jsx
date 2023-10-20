@@ -3,6 +3,7 @@ import "./nav.css";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast } from "react-hot-toast";
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
 const Nav = () => {
   const navlinks = (
@@ -19,7 +20,8 @@ const Nav = () => {
     </>
   );
 
-  const { user, requestUserLogOut } = useContext(AuthContext);
+  const { user, requestUserLogOut, toggleDarkLight, theme } =
+    useContext(AuthContext);
 
   const handleLogout = () => {
     requestUserLogOut()
@@ -65,7 +67,7 @@ const Nav = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <div>
+          <div className="flex items-center">
             {user ? (
               <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -93,6 +95,16 @@ const Nav = () => {
                 Login
               </Link>
             )}
+            <button
+              onClick={toggleDarkLight}
+              className="btn btn-outline btn-circle ml-3"
+            >
+              {theme ? (
+                <MdOutlineLightMode className="text-xl" />
+              ) : (
+                <MdOutlineDarkMode className="text-xl" />
+              )}
+            </button>
           </div>
         </div>
       </div>

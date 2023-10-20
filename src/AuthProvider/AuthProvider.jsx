@@ -17,6 +17,7 @@ const googleAuthProvider = new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState();
   const [loading, setLoading] = useState(true);
+  const [theme, setTheme] = useState(false);
 
   const updateNameAndPhoto = (
     name = "User 4194",
@@ -49,15 +50,21 @@ const AuthProvider = ({ children }) => {
     return signInWithPopup(auth, googleAuthProvider);
   };
 
+  const toggleDarkLight = () => {
+    setTheme(!theme);
+  };
+
   const authInfo = {
     auth,
     user,
     loading,
+    theme,
     userSignUpWithEmailAndPassword,
     updateNameAndPhoto,
     requestUserLogin,
     requestUserLogOut,
     createAccountWithGoogle,
+    toggleDarkLight,
   };
 
   useEffect(() => {
