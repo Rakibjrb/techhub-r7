@@ -30,7 +30,10 @@ const Nav = () => {
   };
 
   return (
-    <div data-theme={theme ? "dark" : "light"}>
+    <div
+      className="sticky top-0 bg-[rgba(255,255,255,0.8)] z-50"
+      data-theme={theme ? "dark" : "light"}
+    >
       <div className="navbar max-w-screen-xl mx-auto px-4 xl:px-0 font-font-lato">
         <div className="navbar-start">
           <div className="dropdown">
