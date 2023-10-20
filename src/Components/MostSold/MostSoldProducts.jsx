@@ -17,7 +17,7 @@ const MostSoldProducts = () => {
   }, []);
 
   return (
-    <div className="max-w-screen-xl mx-auto px-3 xl:px-0 my-16">
+    <div className="max-w-screen-xl mx-auto px-3 xl:px-0 mt-16 pb-16">
       <div className="text-center">
         <h2 className="text-3xl font-bold font-font-lato mb-4">
           Most Sold Products

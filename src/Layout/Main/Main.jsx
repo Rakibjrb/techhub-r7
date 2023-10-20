@@ -12,7 +12,7 @@ const Main = () => {
 
   return (
     <div data-theme={theme ? "dark" : "light"}>
-      <div className="pt-2">
+      <div>
         <Banner />
       </div>
       <Welcome />
